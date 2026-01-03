@@ -1,0 +1,35 @@
+Objective
+The goal of Day 1 was to understand how attendance is currently taken in classrooms and to identify the problems in the existing system. This helped in deciding whether automation is actually required and which technology could be suitable.
+
+Background of the Problem
+In most classrooms, attendance is still taken manually. Teachers either call out roll numbers or ask students to sign a register. Although this method is simple, it takes time in every lecture and becomes repetitive for teachers. When the number of students is large, managing attendance manually becomes difficult and inefficient.
+
+Problems with the Traditional Attendance System
+After observing and analyzing the traditional attendance process, several issues were identified:
+It consumes valuable lecture time
+Manual entry often leads to mistakes
+Proxy attendance is possible
+Maintaining records for long periods is difficult
+Analyzing attendance data later is not easy
+Because of these problems, the manual system is not reliable, especially for large classrooms.
+
+Why an Automated System is Needed
+An automated attendance system can solve many of the issues present in the manual method. Automation can save time during lectures, reduce human errors, and prevent proxy attendance. It also makes it easier to store attendance data digitally and analyze it whenever required.
+
+Why Face Recognition Was Considered
+Face recognition was explored as a possible solution because it does not require any physical interaction from students. Unlike ID cards or QR codes, students do not need to perform any extra action. The system can identify students using their facial features, which makes the process natural and convenient for classroom use.
+
+Challenges in a Real Classroom Environment
+While face recognition is a promising solution, classrooms present real-world challenges such as:
+Many students appearing in a single camera frame
+Faces being partially covered or not clearly visible
+Changes in lighting conditions
+Different seating positions and camera angles
+Students with similar facial features
+These challenges need to be considered while designing the system.
+
+Key Observations from Day 1
+From the initial analysis, it was observed that a face recognition-based attendance system can reduce proxy attendance and improve efficiency. However, the success of such a system depends on choosing the right face detection and recognition models that can handle real classroom conditions.
+
+Conclusion
+Day 1 focused on understanding the real problem before jumping into implementation. This analysis provided clarity on why automation is required and what challenges need to be addressed. The learnings from this day form the base for further research and development of the attendance system.
