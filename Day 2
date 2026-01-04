@@ -1,0 +1,44 @@
+Introduction
+On Day 2, I focused on understanding and comparing different face detection techniques to determine which method works best for classroom images where multiple students appear in a single frame. Classroom environments are challenging due to crowding, face overlap, varying lighting conditions, and different face orientations. The goal of this study was to identify a reliable face detection approach that can be used as a foundation for an attendance system.
+
+What is Face Detection?
+Face detection is a computer vision process used to identify and locate human faces in an image or video frame. It only determines the position of faces, usually by drawing bounding boxes, and does not identify the person. Face detection is always the first step before face recognition, and its accuracy directly affects the overall system performance.
+
+Importance of Face Detection in Classroom Images
+In classroom images, multiple students are present in a single frame, often sitting close to each other. If the face detection step fails to correctly detect all faces, the recognition stage will also produce incorrect results. Therefore, accurate face detection is critical to ensure reliable attendance marking and to avoid missed or false entries.
+
+Face Detection Techniques Studied
+
+1. Haar Cascade (OpenCV)
+Haar Cascade is a traditional face detection technique based on handcrafted features. It is lightweight and fast, making it suitable for simple scenarios. However, in real classroom environments with many students, overlapping faces, and varied lighting, its accuracy drops significantly. It often misses faces or produces false detections.
+Pros: Fast execution, easy to implement
+Cons: Low accuracy in crowded scenes, poor robustness
+
+2. HOG + SVM
+The HOG (Histogram of Oriented Gradients) with SVM approach extracts gradient-based features from images and uses a machine learning classifier for detection. Compared to Haar Cascade, it performs better in structured environments. However, it struggles when faces appear at different angles or under inconsistent lighting conditions, which are common in classrooms.
+
+3. MTCNN
+MTCNN is a deep learning-based face detection model designed to handle multiple faces. It provides good accuracy and detects faces at different scales. However, when the number of faces increases significantly, the detection speed decreases, making it less suitable for real-time classroom attendance systems.
+
+4. RetinaFace
+RetinaFace is a modern deep learning-based face detection model known for its high accuracy and robustness. It performs well even in crowded scenes and can detect partially visible or occluded faces. This makes it highly suitable for classroom environments where students may not always face the camera directly.
+
+5. YOLO (Face Detection Variant)
+YOLO-based face detection models are designed for speed and real-time performance. They can process images very quickly, making them suitable for live systems. However, to achieve high accuracy in classrooms, proper dataset preparation and training are required. Without careful tuning, accuracy may vary.
+
+Comparative Analysis
+After comparing all methods, traditional approaches such as Haar Cascade and HOG + SVM were found to be insufficient for real classroom images. Deep learning-based models showed significantly better performance in terms of accuracy and robustness. RetinaFace provided the most balanced performance among all studied techniques.
+
+Key Observations
+Traditional face detection techniques perform poorly in crowded classroom environments
+Deep learning models handle multiple faces more effectively
+Detection accuracy directly impacts face recognition performance
+A balance between speed and accuracy is necessary for real-time systems
+
+Risks Identified During Detection
+Some faces may be missed in highly crowded scenes
+Low-resolution images can cause false detections
+Detection speed can decrease as the number of faces increases
+
+Conclusion
+Based on the comparative study, RetinaFace was found to be the most suitable face detection technique for classroom environments. It offers high accuracy, handles crowded scenes well, and provides reliable detection for further face recognition and attendance processing stages. This makes it a strong choice for implementing a classroom attendance system.
