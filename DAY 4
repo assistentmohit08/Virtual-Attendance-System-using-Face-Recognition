@@ -1,0 +1,32 @@
+1️⃣ Why Risk Analysis is Important
+Risk analysis helps identify potential system failures before deployment. In real-world classroom environments, uncontrolled conditions such as lighting, movement, and seating arrangements can negatively affect system accuracy and reliability. Early risk identification allows developers to design more robust solutions.
+
+2️⃣ Accuracy-Related Risks
+a) Face Occlusion
+Faces may be partially blocked due to students sitting close together, turning their heads, or objects covering parts of the face. This can lead to missed detections or incorrect recognition.
+
+b) Lighting Variation
+Uneven lighting conditions, shadows, or low illumination reduce facial feature clarity, which decreases recognition accuracy.
+
+c) Camera Angle and Distance
+Faces captured from different angles or distances make it difficult for the model to extract consistent facial features, impacting recognition performance.
+
+3️⃣ Performance-Related Risks
+Processing multiple faces in a single image increases computational load. This can result in slower response times and delays, especially in real-time attendance systems.
+
+4️⃣ Database and Scalability Risks
+As the number of enrolled students increases, the time required to compare facial embeddings also increases. This can cause performance bottlenecks if the system is not optimized for scalability.
+
+5️⃣ Risk Mitigation Strategies
+| Risk Area     | Impact       | Mitigation Strategy                         |
+| ------------- | ------------ | ------------------------------------------- |
+| Occlusion     | Missed faces | Capture multiple images, use better cameras |
+| Lighting      | Low accuracy | Apply image normalization techniques        |
+| Similar faces | Wrong match  | Use higher similarity thresholds            |
+| Performance   | System delay | Batch processing or GPU acceleration        |
+
+6️⃣ Key Observations
+Most system risks arise from environmental and operational factors rather than limitations of the face recognition model itself.
+
+7️⃣ Conclusion of Day 4
+Identifying risks at an early stage enables the development of a more reliable, accurate, and scalable face recognition–based attendance system.
