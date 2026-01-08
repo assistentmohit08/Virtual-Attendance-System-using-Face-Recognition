@@ -1,0 +1,53 @@
+1️⃣ Purpose of the Final Recommendation
+The purpose of this phase is to finalize the most suitable technical approach based on prior research and analysis, and to clearly justify all design decisions before beginning full-scale development.
+
+2️⃣ Final Recommended Technical Approach
+🔹 Face Detection
+Model: RetinaFace
+RetinaFace is selected due to its high accuracy in detecting multiple faces in crowded classroom environments, including partially occluded and non-frontal faces.
+
+🔹 Face Recognition
+Model: ArcFace
+ArcFace generates highly discriminative facial embeddings, making it effective for identifying students even when facial features are very similar.
+
+3️⃣ Database Selection & Justification
+✅ Selected Database: SQL (PostgreSQL / MySQL)
+🔹 Why SQL is Chosen
+SQL databases are structured, reliable, and well-suited for systems with clearly defined relationships such as students, classes, and attendance records. They ensure strong data integrity and consistency.
+
+🔹 Data Stored in SQL Database
+| Data Type          | Description                            |
+| ------------------ | -------------------------------------- |
+| Student Details    | ID, Name, Roll Number, Class           |
+| Face Embeddings    | Numerical vectors linked to student ID |
+| Attendance Records | Date-wise attendance data              |
+| Class Metadata     | Subject, teacher, time                 |
+
+🔹 Why MongoDB is Not Used
+MongoDB is optimized for unstructured or semi-structured data. However, an attendance system requires strong relational consistency, transactional integrity, and structured querying, which SQL databases handle more effectively.
+
+4️⃣ Backend & API Layer
+Technology: Flask (REST API)
+Flask is a lightweight and easy-to-maintain framework, making it suitable for building RESTful APIs that connect AI models with the database and frontend.
+
+5️⃣ Frontend Recommendation
+Approach: Web-Based Application
+A web-based interface allows teachers to upload classroom images easily from any device without requiring application installation, improving accessibility and usability.
+
+6️⃣ High-Level System Workflow (No Code)
+Student details and face images are registered
+Face embeddings are generated and stored in the SQL database
+Teacher uploads a classroom image
+Faces are detected and recognized
+Attendance is marked automatically
+Attendance records are stored and displayed
+
+7️⃣ Trade-offs & Design Decisions
+| Aspect            | Decision                     |
+| ----------------- | ---------------------------- |
+| Accuracy vs Speed | Accuracy prioritized         |
+| SQL vs NoSQL      | Data consistency prioritized |
+| Web vs Mobile App | Accessibility prioritized    |
+
+8️⃣ Final Conclusion of Research Phase
+The combination of RetinaFace for face detection, ArcFace for face recognition, Flask for backend services, and an SQL database provides a scalable, accurate, and real-world feasible solution for automated classroom attendance systems.
